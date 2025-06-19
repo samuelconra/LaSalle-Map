@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas | La Salle Bajío</title>
+
+    <!-- LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.3/mapbox-gl-geocoder.css" type="text/css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section id="map"></section>
+        <section id="sidebar">
+            <div id="header">
+                <i class="fa-solid fa-location-dot"></i>
+                <h1>Mapas</h1>
+                <h2>Universidad La Salle Bajío</h2>
+            </div>
+
+            <div id="sections-selector">
+                <button class="selected" data-section="editor">Editor</button>
+                <button data-section="routes">Rutas</button>
+            </div>
+            
+            <div id="editor-section">
+                <div id="filters-section">
+                    <h2>FILTROS</h2>
+                    <div id="filters-container">
+                        <button class="filter">
+                            <div class="filter-circle"></div>
+                            <p>Salones</p>
+                        </button>
+                        <button class="filter">
+                            <div class="filter-circle"></div>
+                            <p>Canchas</p>
+                        </button>
+                        <button class="filter">
+                            <div class="filter-circle"></div>
+                            <p>Administrativos</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="routes-section">
+                <div id="filters-section">
+                    <h2>ORIGEN</h2>
+                </div>
+            </div>
+        </section>
+
+        <section id="map-style-section">
+            <div id="map-style-list">
+                <div class="option" data-style="default">
+                    <img src="./images/default-style.png" alt="map-style">
+                    <p>Default</p>
+                </div>
+                <div class="option" data-style="satellite">
+                    <img src="./images/satellite-style.png" alt="map-style">
+                    <p>Satellite</p>
+                </div>
+            </div>
+            
+            <button id="map-style-btn">
+                <img src="./images/default-style.png" alt="map-style">
+            </button>
+        </section>
+    </main>
+
+
+    <!-- MAPBOX -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.3/mapbox-gl-geocoder.min.js"></script>
+    <script src="js/map.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+INSERT INTO Places (name, type, careers, building, description, classrooms, floors, coordinates) VALUES
+('Acceso 1', 'Entrada', NULL, NULL, 'Entrada Princial por Boulevard Campestre', NULL, NULL, ST_SetSRID(ST_MakePoint(-101.7129014436568, 21.153585475902105), 4326)),
+('Acceso 2', 'Entrada', NULL, NULL, 'Entrada Estudiantil por Boulevard Campestre', NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71136586140783, 21.15414791704272), 4326)),
+('Acceso 3', 'Entrada', NULL, NULL, 'Entrada para Estacionamiento por Loma del Pino', NULL, NULL, ST_SetSRID(ST_MakePoint(-101.70957181890132, 21.15289856140984), 4326)),
+('Acceso 4', 'Entrada', NULL, NULL, 'Entrada para Estacionamiento por Avenida Universidad', NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71084215683402, 21.150656214845796), 4326)),
+('Acceso 5', 'Entrada', NULL, NULL, 'Entrada Estudiantil por Avenida Universidad', NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71111300097552, 21.15087038033417), 4326)),
+('Acceso 6', 'Entrada', NULL, NULL, 'Entrada a Colaboradores por Avenida Universidad', NULL, NULL, ST_SetSRID(ST_MakePoint(-101.7117631014896, 21.151036974778336), 4326)),
+('Acceso 7', 'Entrada', NULL, NULL, 'Entrada para Estacionamiento por Cima del Sol.', NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71322775290534, 21.151976669649017), 4326)),
+
+('Residencia Universitaria', 'Edificio', NULL, 'A', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71261459810492, 21.151201583916972), 4326)),
+('Rectoría', 'Edificio', NULL, 'B', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71167366245886, 21.151301217791385), 4326)),
+('Museo MIM', 'Edificio', NULL, 'C', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.7112018718691, 21.15153891505267), 4326)),
+('Facultad de Comunicación y Mercadotecnia', 'Edificio', NULL, 'C', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71067250395079, 21.151428656140354), 4326)),
+('Facultad de Odontología', 'Edificio', NULL, 'D', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71009723949814, 21.151500272252463), 4326)),
+('Escuela de Agronomía', 'Edificio', NULL, 'E', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.70957075466876, 21.151813066082994), 4326)),
+('Escuela de Medicina', 'Edificio', NULL, 'R', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.70963068658638, 21.152504180698884), 4326)),
+('Unidad de Prácticas y Talleres', 'Building', NULL, 'F', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71247202829812, 21.151816520385836), 4326)),
+('Facultad de Ciencias Sociales y Humanidades', 'Edificio', NULL, 'G', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71132254796017, 21.15188336574859), 4326)),
+('Facultad de Derecho', 'Edificio', NULL, 'G', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.711892030394, 21.151739581282143), 4326)),
+('Coordinación de Idiomas', 'Edificio', NULL, 'H', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71106310110234, 21.15225904831418), 4326)),
+('Facultad de Ingenierías y Tecnologías', 'Edificio', NULL, 'I', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71166807778889, 21.15230808248694), 4326)),
+('Facultad de Arquitectura', 'Edificio', NULL, 'J', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71174155332643, 21.15253684752055), 4326)),
+('Unidad de Prácticas y Talleres de Diseño', 'Edificio', NULL, 'K', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71062514435222, 21.152583684993644), 4326)),
+('Biblioteca', 'Edificio', NULL, 'L', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71092678179545, 21.153210032891423), 4326)),
+('Facultad de Diseño', 'Edificio', NULL, 'M', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71036272520483, 21.15322357122784), 4326)),
+('Universum Nostrum', 'Edificio', NULL, 'O', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71271091870614, 21.153067189968965), 4326)),
+('Facultad de Negocios', 'Edificio', NULL, 'P', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71129466973858, 21.15385308570383), 4326)),
+('Unidad de Prácticas de Gastronomía', 'Edificio', NULL, 'Q', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71213072798442, 21.153490013712926), 4326)),
+('Parque de Innovación', 'Edificio', NULL, 'Z', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71248709362689, 21.154065508802915), 4326)),
+
+('Canchas de Basquetbol', 'Cancha', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71109491880803, 21.153794198144496), 4326)),
+('Cancha de Fútbol 11', 'Cancha', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71009852055832, 21.15231816184108), 4326)),
+('Cancha de Fútbol Rápido', 'Cancha', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71184583651599, 21.153241900973924), 4326)),
+('Cancha Uruguayo', 'Cancha', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71286064071363, 21.151673837130915), 4326)),
+
+('Jardín del Centenario', 'Jardín', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71150210876758, 21.153233318411054), 4326)),
+('Jardín de la Inclusión', 'Jardín', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71155034277947, 21.15149990644605), 4326)),
+('Jardín del Caos a la Claridad', 'Jardín', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71097117917574, 21.15287034831134), 4326)),
+
+('Tienda Felina', 'Tienda', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71125322181463, 21.150837195770535), 4326)),
+('Tienda Facultad de Negocios', 'Tienda', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71097504359663, 21.153899968938816), 4326)),
+('Tienda Plaza del Centenario', 'Tienda', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71144970580666, 21.153580426742224), 4326)),
+
+('Salón de los Cristales', 'Auditorio', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71271405786315, 21.153335599296824), 4326)),
+('Auditorio Antonio María Lozano', 'Auditorio', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.710902212628, 21.15216313172941), 4326)),
+
+('Gimnasio', 'Gimnasio', NULL, NULL, NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71265541033738, 21.152561089237395), 4326));
