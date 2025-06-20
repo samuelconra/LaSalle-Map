@@ -25,6 +25,7 @@ export async function initMap() {
         const zones = await getZones();
 
         map._placesData = places;
+        map._zonesData = zones;
         
         addPlacesLayer(map, places);
         addPlacesPopUps(map);

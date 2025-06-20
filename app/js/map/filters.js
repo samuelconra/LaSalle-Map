@@ -21,9 +21,8 @@ export function setupFilters(map) {
 
             updatePlacesLayer(map, activeFilters);
 
-            // También actualizar zonas si corresponde
             if (['Cancha', 'Jardín'].includes(filterName)) {
-                updateZonesVisibility(map, filterName, isActive);
+                updateZonesVisibility(map, activeFilters);
             }
         });
     });
@@ -43,20 +42,16 @@ function updatePlacesLayer(map, filters) {
     });
 }
 
-function updateZonesVisibility(map, type, isVisible) {
-    if (!map.getLayer('zones-layer')) return;
+function updateZonesVisibility(map, filters) {
+    const originalData = map._zonesData;
+    if (!originalData || !map.getSource('zones-source')) return;
 
-    const currentFilter = map.getFilter('zones-layer') || ['any'];
+    const filtered = originalData.features.filter(f =>
+        filters.size === 0 || filters.has(f.properties.type)
+    );
 
-    const newFilter = ['any', ...(
-        currentFilter.slice(1).filter(f =>
-            !(Array.isArray(f) && f[0] === '==' && f[2] === type)
-        )
-    )];
-
-    if (isVisible) {
-        newFilter.push(['==', ['get', 'type'], type]);
-    }
-
-    map.setFilter('zones-layer', newFilter);
+    map.getSource('zones-source').setData({
+        type: 'FeatureCollection',
+        features: filtered
+    });
 }
