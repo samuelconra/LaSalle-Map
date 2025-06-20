@@ -1,10 +1,10 @@
 export function addPlacesLayer (map, data) {
     if (map.getSource('places-source')) return;
 
-    data.features.forEach(f => {
-        f.properties.isSource = false;
-        f.properties.isTarget = false;
-    } );
+    // data.features.forEach(f => {
+    //     f.properties.isSource = false;
+    //     f.properties.isTarget = false;
+    // } );
 
     map.addSource('places-source', {
         type: 'geojson',

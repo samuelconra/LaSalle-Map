@@ -1,6 +1,6 @@
-INSERT INTO Zones (type, name, geom) VALUES
+INSERT INTO Zones (type, name, description, geom) VALUES
 -- Cancha de Fútbol 7
-('Cancha', 'Cancha de Fútbol 7',
+('Cancha', 'Cancha de Fútbol 7', 'Espacio intermedio perfecto para partidos de grupos reducidos.',
  ST_Multi(ST_GeomFromText('POLYGON(( 
   -101.7131144851023 21.15188136377722,
   -101.71311814196149 21.151863596842468,
@@ -26,7 +26,7 @@ INSERT INTO Zones (type, name, geom) VALUES
 ))', 4326))),
 
 -- Cancha de Fútbol 11
-('Cancha', 'Cancha de Fútbol 11',
+('Cancha', 'Cancha de Fútbol 11', 'Campo de tamaño reglamentario para torneos y prácticas deportivas.',
  ST_Multi(ST_GeomFromText('POLYGON((
   -101.71049642411134 21.152704751750363,
   -101.71023995972703 21.151779683911613,
@@ -36,7 +36,7 @@ INSERT INTO Zones (type, name, geom) VALUES
 ))', 4326))),
 
 -- Cancha de Fútbol Rápido
-('Cancha', 'Cancha de Fútbol Rápido',
+('Cancha', 'Cancha de Fútbol Rápido', 'Terreno compacto con bardas, ideal para juegos dinámicos.',
  ST_Multi(ST_GeomFromText('POLYGON((
   -101.71201135563722 21.15341934118632,
   -101.71201419314566 21.15339798775975,
@@ -62,7 +62,7 @@ INSERT INTO Zones (type, name, geom) VALUES
 ))', 4326))),
 
 -- Cancha de Basquetbol 1
-('Cancha', 'Cancha de Basquetbol',
+('Cancha', 'Cancha de Basquetbol', 'Espacio abierto con chanchas múltiples para partidos de básquebol.',
  ST_Multi(ST_GeomFromText('POLYGON((
   -101.71110578287548 21.15380311032345,
   -101.71100600292975 21.153563148887983,
@@ -72,7 +72,7 @@ INSERT INTO Zones (type, name, geom) VALUES
 ))', 4326))),
 
 -- Cancha de Basquetbol 2
-('Cancha', 'Cancha de Basquetbol',
+('Cancha', 'Cancha de Basquetbol', 'Espacio abierto con chanchas múltiples para partidos de básquebol.',
  ST_Multi(ST_GeomFromText('POLYGON((
   -101.7109633514129 21.153853569133787,
   -101.71086357146717 21.15361360769832,
@@ -82,7 +82,7 @@ INSERT INTO Zones (type, name, geom) VALUES
 ))', 4326))),
 
 -- Cancha de Volleyball
-('Cancha', 'Cancha de Volleyball',
+('Cancha', 'Cancha de Volleyball', 'Espacio abierto para partidos de volleyball.',
  ST_Multi(ST_GeomFromText('POLYGON((
   -101.71077351929873 21.15386785175572,
   -101.71070922907613 21.153715764564012,
@@ -92,7 +92,7 @@ INSERT INTO Zones (type, name, geom) VALUES
 ))', 4326))),
 
 -- Jardín del Centenario
-('Jardín', 'Jardín del Centenario',
+('Jardín', 'Jardín del Centenario', 'Área verde conmemorativa para descanso y eventos al aire libre.',
  ST_Multi(ST_GeomFromText('POLYGON((
   -101.71179367234284 21.1535243078324,
   -101.71156584924127 21.152966593933996,
@@ -138,7 +138,7 @@ INSERT INTO Zones (type, name, geom) VALUES
 ))', 4326))),
 
 -- Jardín de la Inclusión
-('Jardín', 'Jardín de la Inclusión',
+('Jardín', 'Jardín de la Inclusión', 'Espacio natural con diseño accesible e inclusivo para todos.',
  ST_Multi(ST_GeomFromText('POLYGON((
   -101.71165265526318 21.151519651968812,
   -101.71153210152112 21.151417790491067,
@@ -152,7 +152,7 @@ INSERT INTO Zones (type, name, geom) VALUES
   -101.71165265526318 21.151519651968812
 ))', 4326))),
 
-('Jardín', 'Jardín del Caos a la Claridad',
+('Jardín', 'Jardín del Caos a la Claridad', 'Zona temática para la reflexión y la conexión con la naturaleza.',
  ST_Collect(ARRAY[
    ST_GeomFromText('POLYGON((
      -101.71092112276536 21.152869990699955,

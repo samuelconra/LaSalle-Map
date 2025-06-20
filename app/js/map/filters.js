@@ -6,7 +6,7 @@ export function setupFilters(map) {
     const container = document.getElementById('filters-container');
     renderFilters(container);
 
-    const activeFilters = new Set(['Entrada', 'Edificio', 'Cancha', 'Jardín', 'Tienda', 'Auditorio', 'Gimnasio']);
+    const activeFilters = new Set(['Administrativo', 'Recreativo', 'Jardín', 'Laboratorio', 'Tienda', 'Gimnasio', 'Cancha', 'Facultad', 'Auditorio']);
 
     container.querySelectorAll('.filter').forEach(button => {
         const filterName = button.getAttribute('data-filter');

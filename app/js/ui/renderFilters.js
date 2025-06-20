@@ -1,11 +1,14 @@
 export function renderFilters(container) {
     const filters = [
         { id: 'Entrada', label: 'Entradas' },
-        { id: 'Gimnasio', label: 'Gimnasios' },
-        { id: 'Edificio', label: 'Edificios' },
-        { id: 'Cancha', label: 'Canchas' },
+        { id: 'Administrativo', label: 'Administrativos' },
+        { id: 'Recreativo', label: 'Recreativos' },
         { id: 'Jardín', label: 'Jardines' },
+        { id: 'Laboratorio', label: 'Laboratorios' },
         { id: 'Tienda', label: 'Tiendas' },
+        { id: 'Gimnasio', label: 'Gimnasios' },
+        { id: 'Cancha', label: 'Canchas' },
+        { id: 'Facultad', label: 'Facultades' },
         { id: 'Auditorio', label: 'Auditorios' },
     ];
 

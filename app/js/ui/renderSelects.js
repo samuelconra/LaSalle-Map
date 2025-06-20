@@ -2,7 +2,6 @@ export function renderSelects (places) {
     const sourceSelect = document.getElementById('source-select');
     const targetsContainer = document.getElementById('targets-container');
 
-    console.log(places)
     let optionsHTML = '<option value="-1">¿Dónde estás?</option>';
 
     optionsHTML += places.map(feature => {

@@ -25,10 +25,17 @@ export function setupTargets(map) {
     getRoutesBtn.addEventListener('click', async () => {
         const source = document.getElementById('source-select').value;
 
+        if (source === '-1'){
+            alert('Selecciona un origen.')
+            return;
+        } else if (targets.size === 0) {
+            alert('Selecciona al menos un destino.');
+            return;
+        }
+
         const data = await getRoute(source, targets);
         addRouteLayer(map, data)
     })
-
 }
 
 // async function calcRoute () {

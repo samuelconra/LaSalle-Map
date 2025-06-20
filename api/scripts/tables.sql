@@ -37,6 +37,7 @@ CREATE TABLE Zones (
     id SERIAL PRIMARY KEY,
     type VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NULL,
     geom GEOMETRY(MULTIPOLYGON, 4326)
 );
 

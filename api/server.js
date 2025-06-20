@@ -56,6 +56,7 @@ app.get('/places', async (req, res) => {
             id: row.id, 
             name: row.name,
             type: row.type,
+            careers: row.careers,
             building: row.building,
             description: row.description,
             classrooms: row.classrooms,
