@@ -31,6 +31,23 @@
                     <h2>FILTROS</h2>
                     <div id="filters-container"></div>
                 </div>
+                <div id="turf-section">
+                    <h2>FUNCIONES</h2>
+                    <div id="functions-container">
+                        <button class="turf-btn" id="buffer-btn">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                            <p>Marcar área de influencia</p>
+                        </button>
+                        <button class="turf-btn" id="area-btn">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <p>Calcular área de una zona</p>
+                        </button>
+                        <button class="turf-btn" id="nearest-btn">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <p>Marcar lugar más cercano</p>
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div id="routes-section">
@@ -40,7 +57,7 @@
                         <option value="-1">¿Dónde estás?</option>
                     </select>
                 </div>
-                
+
                 <div id="target-section">
                     <h2>DESTINOS</h2>
                     <div id="targets-container"></div>
@@ -72,6 +89,7 @@
     <!-- MAPBOX -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.3/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
     <script src="js/main.js" type="module"></script>
 </body>
 </html>

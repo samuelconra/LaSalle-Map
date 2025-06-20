@@ -1,5 +1,7 @@
 import { getRoute } from "../services/geoData.js";
-import { addRouteLayer } from "./layers.js";
+import { drawBuffer } from "../turf/buffer.js";
+import { findNearestPlace, getZoneArea } from "../turf/turfFunctions.js";
+import { addRouteLayer, highlightNearestPlace } from "./layers.js";
 
 export function setupTargets(map) {
     const container = document.getElementById('targets-container');
@@ -36,6 +38,77 @@ export function setupTargets(map) {
         const data = await getRoute(source, targets);
         addRouteLayer(map, data)
     })
+
+    const bufferBtn = document.getElementById('buffer-btn');
+    bufferBtn.addEventListener('click', () => {
+        const sourceSelect = document.getElementById('source-select');
+        const selectedValue = sourceSelect.value;
+
+        if (selectedValue === '-1') {
+            alert('Selecciona un punto de origen.');
+            return;
+        }
+
+        const sourceFeature = map._placesData.features[selectedValue - 1];
+
+        if (!sourceFeature) {
+            alert('No se encontró el punto seleccionado.');
+            return;
+        }
+
+        const coordinates = sourceFeature.geometry.coordinates;
+        drawBuffer(map, coordinates);
+    });
+
+
+    let isSelectingZone = false;
+    document.getElementById('area-btn').addEventListener('click', () => {
+        alert('Haz clic en una zona del mapa para calcular su área.');
+        isSelectingZone = true;
+    });
+
+    map.on('click', 'zones-layer', (e) => {
+        if (!isSelectingZone) return;
+
+        const zoneFeature = e.features[0];
+        const area = getZoneArea(zoneFeature);
+        alert(area)
+        isSelectingZone = false;
+    });
+
+
+
+
+
+    document.getElementById('nearest-btn').addEventListener('click', () => {
+        const sourceSelect = document.getElementById('source-select');
+        const selectedValue = sourceSelect.value;
+
+        if (selectedValue === '-1') {
+            alert('Por favor selecciona un punto de origen.');
+            return;
+        }
+
+        const sourceFeature = map._placesData.features[selectedValue - 1];
+
+        if (!sourceFeature) {
+            alert('No se encontró el punto seleccionado.');
+            return;
+        }
+
+        const otherFeatures = map._placesData.features.filter(f =>
+            String(f.properties.id) !== String(selectedValue)
+        );
+
+        console.log(otherFeatures)
+
+        const nearest = findNearestPlace(
+            sourceFeature.geometry.coordinates,
+            otherFeatures
+        );
+
+        highlightNearestPlace(map, nearest);
+    });
 }
 
 // async function calcRoute () {

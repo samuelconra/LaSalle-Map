@@ -109,8 +109,32 @@ export function addRouteLayer (map, data) {
             'line-cap': 'round'
         },
         paint: {
-            'line-color': 'orange',
+            'line-color': '#e6194b',
             'line-width': 2
         }
     }, 'places-layer');
+}
+
+export function highlightNearestPlace(map, feature) {
+    if (map.getLayer('nearest-layer')) {
+        map.removeLayer('nearest-layer');
+        map.removeSource('nearest-source');
+    }
+
+    map.addSource('nearest-source', {
+        type: 'geojson',
+        data: feature
+    });
+
+    map.addLayer({
+        id: 'nearest-layer',
+        type: 'circle',
+        source: 'nearest-source',
+        paint: {
+            'circle-color': '#ff0000',
+            'circle-radius': 6,
+            'circle-stroke-width': 2,
+            'circle-stroke-color': '#ffffff'
+        }
+    });
 }

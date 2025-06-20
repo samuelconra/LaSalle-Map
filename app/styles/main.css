@@ -186,6 +186,47 @@ main {
 }
 
 
+#turf-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#turf-section h2 {
+    font-weight: 500;
+    color: #525252;
+    font-size: 15px;
+}
+#functions-container {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.turf-btn {
+    width: 100%;
+    text-align: start;
+    background-color: #F1F1F1;
+    border: 2px solid #D3D3D3;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+.turf-btn:hover {
+    border-color: #8D8D8D;
+}
+.turf-btn:active {
+    scale: 0.9;
+}
+
+
 /* ROUTES SECTION  */
 /* ------------------------------------------------------------------ */
 #routes-section{
