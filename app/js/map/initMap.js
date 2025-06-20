@@ -1,7 +1,9 @@
 import { MAPBOX_TOKEN } from '../../config.js';
 import { getPlaces, getRoads, getZones } from '../services/geoData.js';
+import { renderSelects } from '../ui/renderSelects.js';
 import { addPlacesLayer, addRoadsLayer, addZonesLayer } from './layers.js';
 import { addPlacesPopUps, addZonesPopUps } from './popups.js';
+import { setupTargets } from './targets.js';
 
 export async function initMap() {
     mapboxgl.accessToken = MAPBOX_TOKEN;
@@ -33,6 +35,9 @@ export async function initMap() {
         // addRoadsLayer(map, roads);
         addZonesLayer(map, zones);
         addZonesPopUps(map);
+
+        renderSelects(places.features);
+        setupTargets(map);
 
         map.setPaintProperty('buildings-lasalle', 'fill-extrusion-opacity', 0.9);
     });

@@ -39,7 +39,7 @@ export function addZonesPopUps (map) {
             .addTo(map);
     });
 
-    map.on('mouseenter', 'states-layer', () => {
+    map.on('mouseenter', 'zones-layer', () => {
             map.getCanvas().style.cursor = 'pointer';
         });
 

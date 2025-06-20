@@ -29,27 +29,24 @@
             <div id="editor-section">
                 <div id="filters-section">
                     <h2>FILTROS</h2>
-                    <div id="filters-container">
-                        <button class="filter">
-                            <div class="filter-circle"><i class="fa-solid fa-check"></i></div>
-                            <p>Cancha</p>
-                        </button>
-                        <button class="filter">
-                            <div class="filter-circle"><i class="fa-solid fa-check"></i></div>
-                            <p>Edificio</p>
-                        </button>
-                        <button class="filter">
-                            <div class="filter-circle"><i class="fa-solid fa-check"></i></div>
-                            <p>Administrativos</p>
-                        </button>
-                    </div>
+                    <div id="filters-container"></div>
                 </div>
             </div>
 
             <div id="routes-section">
-                <div id="filters-section">
+                <div id="source-section">
                     <h2>ORIGEN</h2>
+                    <select id="source-select">
+                        <option value="-1">¿Dónde estás?</option>
+                    </select>
                 </div>
+                
+                <div id="target-section">
+                    <h2>DESTINOS</h2>
+                    <div id="targets-container"></div>
+                </div>
+
+                <button id="getRoutesBtn">Ver rutas</button>
             </div>
         </section>
 

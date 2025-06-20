@@ -14,10 +14,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     1,
     38,
     0,
@@ -30,10 +28,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     38,
     26,
     0,
@@ -47,11 +43,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     27,
     38,
     0,
@@ -65,11 +58,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     27,
     26,
     0,
@@ -83,11 +73,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     38,
     24,
     0,
@@ -98,11 +85,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     24,
     40,
     0,
@@ -116,11 +100,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     7,
     40,
     0,
@@ -132,11 +113,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     7,
     15,
     0,
@@ -148,11 +126,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     40,
     15,
     0,
@@ -164,11 +139,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     7,
     31,
     0,
@@ -180,11 +152,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     15,
     31,
     0,
@@ -197,11 +166,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     40,
     31,
     0,
@@ -214,11 +180,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     15,
     8,
     0,
@@ -231,10 +194,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     26,
     25,
     0,
@@ -246,11 +207,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     25,
     2,
     0,
@@ -261,11 +219,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     25,
     36,
     0,
@@ -277,10 +232,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     25,
     28,
     0,
@@ -292,10 +245,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     28,
     36,
     0,
@@ -307,10 +258,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
     25,
     37,
     0,
@@ -322,10 +271,8 @@ VALUES (
         ))',
         4326
     )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   26,
   37,
   0,
@@ -337,10 +284,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   26,
   30,
   0,
@@ -351,10 +296,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   37,
   32,
   0,
@@ -365,10 +308,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   22,
   34,
   0,
@@ -379,10 +320,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   22,
   23,
   0,
@@ -396,10 +335,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   25,
   23,
   0,
@@ -413,10 +350,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   34,
   23,
   0,
@@ -430,10 +365,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   34,
   21,
   0,
@@ -447,10 +380,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   21,
   18,
   0,
@@ -465,10 +396,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   34,
   18,
   0,
@@ -481,10 +410,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   18,
   39,
   0,
@@ -496,10 +423,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   18,
   16,
   0,
@@ -512,10 +437,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   39,
   16,
   0,
@@ -529,10 +452,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   20,
   19,
   0,
@@ -543,10 +464,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   19,
   16,
   0,
@@ -558,10 +477,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   19,
   18,
   0,
@@ -574,10 +491,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   26,
   20,
   0,
@@ -588,10 +503,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   23,
   3,
   0,
@@ -603,11 +516,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   3,
   14,
   0,
@@ -619,10 +529,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   14,
   13,
   0,
@@ -635,10 +543,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   13,
   12,
   0,
@@ -650,10 +556,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   21,
   29,
   0,
@@ -667,10 +571,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   12,
   29,
   0,
@@ -682,10 +584,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   39,
   29,
   0,
@@ -696,10 +596,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   12,
   11,
   0,
@@ -712,10 +610,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   5,
   4,
   0,
@@ -726,10 +622,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   5,
   35,
   0,
@@ -740,10 +634,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   5,
   9,
   0,
@@ -754,10 +646,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   6,
   9,
   0,
@@ -769,10 +659,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   6,
   35,
   0,
@@ -783,10 +671,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   4,
   11,
   0,
@@ -798,10 +684,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   5,
   11,
   0,
@@ -813,10 +697,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   5,
   10,
   0,
@@ -828,10 +710,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   5,
   33,
   0,
@@ -843,10 +723,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   6,
   10,
   0,
@@ -859,10 +737,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   6,
   33,
   0,
@@ -875,11 +751,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   9,
   33,
   0,
@@ -893,10 +766,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   16,
   17,
   0,
@@ -907,11 +778,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   37,
   22,
   0,
@@ -927,11 +795,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   40,
   20,
   0,
@@ -944,10 +809,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   19,
   17,
   0,
@@ -960,11 +823,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   17,
   33,
   0,
@@ -977,10 +837,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   7,
   19,
   0,
@@ -992,10 +850,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   34,
   20,
   0,
@@ -1011,11 +867,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   7,
   20,
   0,
@@ -1028,10 +881,8 @@ VALUES (
     ))',
     4326
   )
-);
-
-INSERT INTO Roads (source, target, cost, geom)
-VALUES (
+),
+(
   34,
   3,
   0,
@@ -1045,4 +896,11 @@ VALUES (
     ))',
     4326
   )
+);
+
+UPDATE Roads
+SET cost = ROUND(
+    ST_Length(
+        ST_Transform(geom, 3857)
+    )
 );

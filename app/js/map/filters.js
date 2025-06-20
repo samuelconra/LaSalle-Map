@@ -1,4 +1,6 @@
 import { renderFilters } from '../ui/renderFilters.js';
+import { renderSelects } from '../ui/renderSelects.js';
+import { setupTargets } from './targets.js';
 
 export function setupFilters(map) {
     const container = document.getElementById('filters-container');
@@ -40,6 +42,9 @@ function updatePlacesLayer(map, filters) {
         type: 'FeatureCollection',
         features: filtered
     });
+
+    renderSelects(filtered);
+    setupTargets(map);
 }
 
 function updateZonesVisibility(map, filters) {

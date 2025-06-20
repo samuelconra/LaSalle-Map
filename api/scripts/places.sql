@@ -14,7 +14,7 @@ INSERT INTO Places (name, type, careers, building, description, classrooms, floo
 ('Facultad de Odontología', 'Edificio', NULL, 'D', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71009723949814, 21.151500272252463), 4326)),
 ('Escuela de Agronomía', 'Edificio', NULL, 'E', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.70957075466876, 21.151813066082994), 4326)),
 ('Escuela de Medicina', 'Edificio', NULL, 'R', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.70963068658638, 21.152504180698884), 4326)),
-('Unidad de Prácticas y Talleres', 'Building', NULL, 'F', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71247202829812, 21.151816520385836), 4326)),
+('Unidad de Prácticas y Talleres', 'Edificio', NULL, 'F', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71247202829812, 21.151816520385836), 4326)),
 ('Facultad de Ciencias Sociales y Humanidades', 'Edificio', NULL, 'G', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71132254796017, 21.15188336574859), 4326)),
 ('Facultad de Derecho', 'Edificio', NULL, 'G', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.711892030394, 21.151739581282143), 4326)),
 ('Coordinación de Idiomas', 'Edificio', NULL, 'H', NULL, NULL, NULL, ST_SetSRID(ST_MakePoint(-101.71106310110234, 21.15225904831418), 4326)),

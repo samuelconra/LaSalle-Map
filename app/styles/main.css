@@ -54,6 +54,8 @@ main {
 
     background-color: rgba(224, 224, 224, 0.6);
     backdrop-filter: blur(10px);
+
+    overflow: hidden;
 }
 
 #header {
@@ -108,11 +110,13 @@ main {
 }
 
 
+/* EDITOR SECTION  */
+/* ------------------------------------------------------------------ */
+
 #editor-section {
     display: flex;
-}
-#routes-section {
-    display: none;
+    flex-direction: column;
+    gap: 15px;
 }
 
 #filters-section {
@@ -181,6 +185,117 @@ main {
 }
 
 
+/* ROUTES SECTION  */
+/* ------------------------------------------------------------------ */
+#routes-section{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+
+    flex: 1;
+    min-height: 0;
+    overflow: hidden; 
+} 
+#source-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+#source-section h2 {
+    font-weight: 500;
+    color: #525252;
+    font-size: 15px;
+}
+#source-select {
+    background-color: #F1F1F1;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+#source-select:hover{
+    border-color: #8D8D8D;
+}
+#source-select:focus {
+    outline: none;
+    border-color: #1767E6;
+}
+
+#target-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+
+    flex: 1;
+    min-height: 0;
+}
+#target-section h2 {
+    font-weight: 500;
+    color: #525252;
+    font-size: 15px;
+}
+
+#targets-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+.target {
+    background-color: #F1F1F1;
+    border: 1.5px solid #D3D3D3;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: start;
+    transition: all 0.4s ease;
+}
+.target h4{
+    font-size: 13px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 2px;
+}
+.target p{
+    font-size: 12px;
+    font-weight: 300;
+    color: #525252;
+}
+.target:hover{
+    border-color: #8D8D8D;
+}
+.target:active{
+    transition: all 0.1s ease;
+    border-color: #1767E6;
+}
+
+.target.selected {
+    border-color: #1767E6;
+}
+.target.selected:hover {
+    opacity: 0.6;
+}
+
+#getRoutesBtn {
+    background-color: #1767E6;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#getRoutesBtn:hover {
+    background-color: #083c91;
+}
+#getRoutesBtn:active {
+    transition: all 0.1s ease;
+    scale: 0.9;
+}
 
 /* MAP STYLE  */
 /* ------------------------------------------------------------------ */

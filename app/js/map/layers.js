@@ -88,3 +88,29 @@ export function addZonesLayer (map, data) {
         },
     }, 'places-layer');
 }
+
+export function addRouteLayer (map, data) {
+    if (map.getLayer('route-layer')) {
+        map.removeLayer('route-layer');
+        map.removeSource('route-source');
+    }
+
+    map.addSource('route-source', {
+        type: 'geojson',
+        data: data
+    });
+
+    map.addLayer({
+        id: 'route-layer',
+        type: 'line',
+        source: 'route-source',
+        layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        paint: {
+            'line-color': 'orange',
+            'line-width': 2
+        }
+    }, 'places-layer');
+}
