@@ -3,11 +3,18 @@ import { drawBuffer } from "../turf/buffer.js";
 import { findNearestPlace, getZoneArea } from "../turf/turfFunctions.js";
 import { addRouteLayer, highlightNearestPlace } from "./layers.js";
 
+let onClickRouteBtn;
+let routeListenerAttached = false;
+
 export function setupTargets(map) {
     const container = document.getElementById('targets-container');
     const getRoutesBtn = document.getElementById('getRoutesBtn');
 
-    const targets = new Set();
+    // Usar un Set persistente en el mapa
+    if (!map._targets) map._targets = new Set();
+
+    // Limpiar el set antes de generar nuevos botones
+    map._targets.clear();
 
     container.querySelectorAll('.target').forEach(button => {
         const placeID = button.getAttribute('data-id');
@@ -17,28 +24,40 @@ export function setupTargets(map) {
 
             const isActive = button.classList.contains("selected");
             if (isActive) {
-                targets.add(placeID);
+                map._targets.add(placeID);
             } else {
-                targets.delete(placeID);
+                map._targets.delete(placeID);
             }
         });
     });
 
-    getRoutesBtn.addEventListener('click', async () => {
-        const source = document.getElementById('source-select').value;
+    // Asegurar una única instancia de la función con referencia al Set de map._targets
+    if (!onClickRouteBtn) {
+        onClickRouteBtn = async function () {
+            const source = document.getElementById('source-select').value;
 
-        if (source === '-1'){
-            alert('Selecciona un origen.')
-            return;
-        } else if (targets.size === 0) {
-            alert('Selecciona al menos un destino.');
-            return;
-        }
+            if (source === '-1') {
+                alert('Selecciona un origen.');
+                return;
+            }
+            if (map._targets.size === 0) {
+                alert('Selecciona al menos un destino.');
+                return;
+            }
 
-        const data = await getRoute(source, targets);
-        addRouteLayer(map, data)
-    })
+            const data = await getRoute(source, map._targets);
+            addRouteLayer(map, data);
+        };
+    }
 
+    if (!routeListenerAttached) {
+        getRoutesBtn.addEventListener('click', onClickRouteBtn);
+        routeListenerAttached = true;
+    } else {
+        return;
+    }
+
+    // Otros listeners que deben añadirse solo una vez
     const bufferBtn = document.getElementById('buffer-btn');
     bufferBtn.addEventListener('click', () => {
         const sourceSelect = document.getElementById('source-select');
@@ -50,16 +69,13 @@ export function setupTargets(map) {
         }
 
         const sourceFeature = map._placesData.features[selectedValue - 1];
-
         if (!sourceFeature) {
             alert('No se encontró el punto seleccionado.');
             return;
         }
 
-        const coordinates = sourceFeature.geometry.coordinates;
-        drawBuffer(map, coordinates);
+        drawBuffer(map, sourceFeature.geometry.coordinates);
     });
-
 
     let isSelectingZone = false;
     document.getElementById('area-btn').addEventListener('click', () => {
@@ -69,16 +85,11 @@ export function setupTargets(map) {
 
     map.on('click', 'zones-layer', (e) => {
         if (!isSelectingZone) return;
-
         const zoneFeature = e.features[0];
         const area = getZoneArea(zoneFeature);
-        alert(area)
+        alert(area);
         isSelectingZone = false;
     });
-
-
-
-
 
     document.getElementById('nearest-btn').addEventListener('click', () => {
         const sourceSelect = document.getElementById('source-select');
@@ -90,7 +101,6 @@ export function setupTargets(map) {
         }
 
         const sourceFeature = map._placesData.features[selectedValue - 1];
-
         if (!sourceFeature) {
             alert('No se encontró el punto seleccionado.');
             return;
@@ -100,31 +110,7 @@ export function setupTargets(map) {
             String(f.properties.id) !== String(selectedValue)
         );
 
-        console.log(otherFeatures)
-
-        const nearest = findNearestPlace(
-            sourceFeature.geometry.coordinates,
-            otherFeatures
-        );
-
+        const nearest = findNearestPlace(sourceFeature.geometry.coordinates, otherFeatures);
         highlightNearestPlace(map, nearest);
     });
 }
-
-// async function calcRoute () {
-//     const source = sourceSelect.value;
-//     const target = targetSelect.value;
-
-//     if (source === target){
-//         alert('Ya estás en ese sitio.');
-//         return;
-//     } else if (source === "0" || target === "0") {
-//         alert('Elige un lugar disponible');
-//         return;
-//     }
-
-//     const data = await getRoute(source, targets);
-
-//     addRouteLayer(map, data);
-//     addRoutePopUp(map);
-// }

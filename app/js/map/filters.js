@@ -26,6 +26,13 @@ export function setupFilters(map) {
             if (['Cancha', 'Jardín'].includes(filterName)) {
                 updateZonesVisibility(map, activeFilters);
             }
+
+            if (map.getLayer('route-layer')) {
+                map.removeLayer('route-layer');
+            }
+            if (map.getSource('route-source')) {
+                map.removeSource('route-source');
+            }
         });
     });
 }
