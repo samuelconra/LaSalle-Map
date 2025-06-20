@@ -10,6 +10,11 @@ export async function getRoads () {
     return await res.json()
 }
 
+export async function getZones () {
+    const res = await fetch(`${URL}/zones`);
+    return await res.json()
+}
+
 export async function getRoute(source, targets) {
     const queryParams = new URLSearchParams();
     queryParams.append('source', source);

@@ -87,4 +87,24 @@ app.get('/roads', async (req, res) => {
   res.json(geojson);
 });
 
+app.get('/zones', async (req, res) => {
+  const result = await pool.query(`
+    SELECT id, name, type, ST_AsGeoJSON(geom) AS geom FROM Zones;
+  `);
+  
+  const geojson = {
+    type: "FeatureCollection",
+    features: result.rows.map(row => ({
+        type: "Feature",
+        geometry: JSON.parse(row.geom),
+        properties: { 
+            id: row.id, 
+            name: row.name,
+            type: row.type,
+        }
+    }))
+  };
+  res.json(geojson);
+});
+
 app.listen(PORT, () => console.log(`Server in http://${HOST}:${PORT}`));

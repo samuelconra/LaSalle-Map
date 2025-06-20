@@ -145,13 +145,8 @@ main {
 
     transition: all 0.5s ease;
 }
-
-.filter:active .filter-circle{
-    transition: all 0.3s ease;
-    border-color: #1767E6;
-    background-color: #1767E6;
-}
 .filter-circle {
+    position: relative;
     height: 100%;
     aspect-ratio: 1/1;
     border: 1px solid #C9C9C9;
@@ -164,6 +159,27 @@ main {
     font-weight: 400;
     color: black;
 }
+.filter-circle i{
+    display: none;
+    color: #C9C9C9;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 1px;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+.filter.selected .filter-circle{
+    transition: all 0.3s ease;
+    border-color: #1767E6;
+    background-color: #1767E6;
+}
+.filter.selected .filter-circle i{
+    display: inline;
+}
+
 
 
 /* MAP STYLE  */
