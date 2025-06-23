@@ -52,7 +52,7 @@ main {
     left: 30px;
     transform: translate(0, -50%);
 
-    background-color: rgba(224, 224, 224, 0.6);
+    background-color: var(--background-sidebar);
     backdrop-filter: blur(10px);
 
     overflow: hidden;
@@ -65,18 +65,18 @@ main {
 }
 #header i {
     font-size: 35px;
-    color: #000;
+    color: var(--black);
     margin-bottom: 7px;
 }
 #header h1 {
     font-size: 26px;
     font-weight: 500;
-    color: #000;
+    color: var(--black);
 }
 #sidebar h2 {
     font-size: 16px;
     font-weight: 400;
-    color: #8D8D8D;
+    color: var(--sidebar-h2);
 }
 
 
@@ -86,8 +86,8 @@ main {
     padding: 4px;
     display: flex;
 
-    background-color: #F1F1F1;
-    border: 1px solid #D3D3D3;
+    background-color: var(--background-buttons);
+    border: 1px solid var(--border-buttons);
 }
 #sections-selector button {
     width: 100%;
@@ -105,7 +105,7 @@ main {
     color: #000;
 }
 #sections-selector button.selected{
-    background-color: #F5F5F5;
+    background-color: var(--section-buttons);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -126,7 +126,7 @@ main {
 }
 #filters-section h2 {
     font-weight: 500;
-    color: #525252;
+    color: var(--sections-h2);
     font-size: 15px;
 }
 
@@ -142,7 +142,7 @@ main {
     padding-right: 23px;
     gap: 5px;
 
-    border: 1px solid #C9C9C9;
+    border: 1px solid var(--border-filter);
     background-color: transparent;
     border-radius: 50px;
     cursor: pointer;
@@ -154,7 +154,7 @@ main {
     position: relative;
     height: 100%;
     aspect-ratio: 1/1;
-    border: 1px solid #C9C9C9;
+    border: 1px solid var(--border-filter);
     border-radius: 50px;
 
     transition: all 0.5s ease;
@@ -166,7 +166,7 @@ main {
 }
 .filter-circle i{
     display: none;
-    color: #C9C9C9;
+    color: var(--border-filter);
 
     position: absolute;
     top: 50%;
@@ -205,8 +205,8 @@ main {
 .turf-btn {
     width: 100%;
     text-align: start;
-    background-color: #F1F1F1;
-    border: 2px solid #D3D3D3;
+    background-color: var(--background-buttons);
+    border: 2px solid var(--border-buttons);
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -220,7 +220,7 @@ main {
     transition: all 0.3s ease;
 }
 .turf-btn:hover {
-    border-color: #8D8D8D;
+    border-color: var(--sidebar-h2);
 }
 .turf-btn:active {
     scale: 0.9;
@@ -250,8 +250,8 @@ main {
     font-size: 15px;
 }
 #source-select {
-    background-color: #F1F1F1;
-    border: 1px solid #D3D3D3;
+    background-color: var(--background-buttons);
+    border: 1px solid var(--border-buttons);
     border-radius: 5px;
     width: 100%;
     padding: 5px 5px;
@@ -583,4 +583,24 @@ main {
 }
 .popup-type.Recreativo {
     background-color: #F4C3F5;
+}
+
+
+/* COLORS */
+/* light mode */
+:root {
+    --background-sidebar: rgba(224, 224, 224, 0.6);
+    --black: #000;
+    --sidebar-h2: #8D8D8D;
+    --background-buttons: #F1F1F1;
+    --border-buttons: #D3D3D3;
+    --section-buttons: #F5F5F5;
+    --sections-h2: #525252;
+    --border-filter: #C9C9C9;
+
+    --primary: #FFFFFF;
+    --secondary: #969696;
+    --inverse-primary: #000000;
+    --surface: #6E6E6E;
+    --on-background: #212121;
 }

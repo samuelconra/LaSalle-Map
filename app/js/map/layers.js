@@ -1,10 +1,10 @@
 export function addPlacesLayer (map, data) {
     if (map.getSource('places-source')) return;
 
-    // data.features.forEach(f => {
-    //     f.properties.isSource = false;
-    //     f.properties.isTarget = false;
-    // } );
+    data.features.forEach(f => {
+        f.properties.isSource = false;
+        f.properties.isTarget = false;
+    } );
 
     map.addSource('places-source', {
         type: 'geojson',
@@ -18,8 +18,18 @@ export function addPlacesLayer (map, data) {
         type: 'circle',
         source: 'places-source',
         paint: {
-            'circle-color': 'rgba(66, 100, 251, 0.7)',
-            'circle-radius': 4,
+            'circle-color': [
+                'case',
+                ['==', ['get', 'isSource'], true], 'rgb(4, 0, 244)',
+                ['==', ['get', 'isTarget'], true], '#00cc44',
+                'rgba(66, 100, 251, 0.8)'
+            ],
+            'circle-radius': [
+                'case',
+                ['==', ['get', 'isSource'], true], 5,
+                ['==', ['get', 'isTarget'], true], 5,
+                4
+            ],
             'circle-stroke-width': 1.5,
             'circle-stroke-color': '#ffffff',
             'circle-emissive-strength': 0,

@@ -1,4 +1,4 @@
-import { addPlacesLayer } from './layers.js';
+import { addPlacesLayer, addZonesLayer } from './layers.js';
 
 export function setupMapStyleSwitcher(map) {
     const styleListDiv = document.getElementById('map-style-list');
@@ -33,6 +33,7 @@ export function setupMapStyleSwitcher(map) {
 
             map.once('style.load', () => {
                 addPlacesLayer(map, map._placesData);
+                addZonesLayer(map, map._zonesData);
             });
 
             map.setStyle(newStyle);

@@ -42,5 +42,7 @@ export async function initMap() {
         map.setPaintProperty('buildings-lasalle', 'fill-extrusion-opacity', 0.9);
     });
 
+    window.map = map;
+
     return map;
 }

@@ -33,6 +33,20 @@ export function setupFilters(map) {
             if (map.getSource('route-source')) {
                 map.removeSource('route-source');
             }
+
+            if (map.getLayer('buffer-layer')) {
+                map.removeLayer('buffer-layer');
+            }
+            if (map.getSource('buffer-source')) {
+                map.removeSource('buffer-source');
+            }
+            
+            if (map.getLayer('nearest-layer')) {
+                map.removeLayer('nearest-layer');
+            }
+            if (map.getSource('nearest-source')) {
+                map.removeSource('nearest-source');
+            }
         });
     });
 }

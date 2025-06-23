@@ -59,7 +59,6 @@ export function addPlacesPopUps (map) {
             `
         }
 
-        
         popup
             .setLngLat(coordinates)
             .setHTML(popupHTML)
@@ -80,11 +79,23 @@ export function addZonesPopUps (map) {
     
     map.on('click', 'zones-layer', (e) => {
         const name = e.features[0].properties.name;
-        const id = e.features[0].properties.id;
+        const type = e.features[0].properties.type;
+        const description = e.features[0].properties.description;
+
+        const popupHTML = `
+                <div class="other-popup">
+                    <div class="content">
+                        <h4>${name}</h4>
+                        
+                        <p class="popup-type ${type}">${type}</p>
+                        
+                        <p class="description">${description}</p>
+                </div>
+            `
 
         popup
             .setLngLat(e.lngLat)
-            .setHTML(`<p><strong>${id}.</strong> ${name}</p>`)
+            .setHTML(popupHTML)
             .addTo(map);
     });
 

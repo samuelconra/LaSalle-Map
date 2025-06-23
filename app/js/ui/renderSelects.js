@@ -16,6 +16,18 @@ export function renderSelects (places) {
     }).join('');
 
     sourceSelect.innerHTML = optionsHTML;
+    
+    sourceSelect.addEventListener('change', () => {
+        const value = sourceSelect.value;
+
+        const features = window.map._placesData.features;
+        features.forEach(f => {
+            f.properties.isSource = String(f.properties.id) === value;
+        });
+
+        window.map.getSource('places-source').setData(window.map._placesData);
+    });
+
 
     targetsContainer.innerHTML = places.map(feature => {
         const name = feature.properties.name;

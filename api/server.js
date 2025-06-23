@@ -101,7 +101,7 @@ app.get('/roads', async (req, res) => {
 
 app.get('/zones', async (req, res) => {
   const result = await pool.query(`
-    SELECT id, name, type, ST_AsGeoJSON(geom) AS geom FROM Zones;
+    SELECT id, name, type, description, ST_AsGeoJSON(geom) AS geom FROM Zones;
   `);
   
   const geojson = {
@@ -113,6 +113,7 @@ app.get('/zones', async (req, res) => {
             id: row.id, 
             name: row.name,
             type: row.type,
+            description: row.description,
         }
     }))
   };
